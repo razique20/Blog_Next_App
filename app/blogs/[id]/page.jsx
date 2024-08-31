@@ -1,9 +1,9 @@
 "use client";
 import { assets, blog_data } from "@/Assets/assets";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 import Footer from "@/Components/Footer";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const page = ({ params }) => {
   const [data, setData] = useState(null);
@@ -25,13 +25,13 @@ const page = ({ params }) => {
       {" "}
       <div className="bg-gray-200 py-2 px-5 ms:px-12 lg:px-28">
         <div className="flex justify-between items-center ">
-          <Link href={'/'}>
-          <Image
-            src={assets.logo}
-            width={180}
-            alt="logo"
-            className="w-[130px] sm:w-auto"
-          />
+          <Link href={"/"}>
+            <Image
+              src={assets.logo}
+              width={180}
+              alt="logo"
+              className="w-[130px] sm:w-auto"
+            />
           </Link>
           <button className="flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-black shadow-[-7px_7px_0px_#000000]">
             Get Started{" "}
@@ -92,19 +92,19 @@ const page = ({ params }) => {
         <p className="my-3">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. m has been the..
-
           <div className="my-24">
-            <p className="text-black font font-semibold my-4">Share this article on social media</p>
+            <p className="text-black font font-semibold my-4">
+              Share this article on social media
+            </p>
             <div className="flex">
-            <Image src={assets.facebook_icon} width={50} alt=""/>
-            <Image src={assets.twitter_icon} width={50} alt=""/>
-            <Image src={assets.googleplus_icon} width={50} alt=""/>
-
+              <Image src={assets.facebook_icon} width={50} alt="" />
+              <Image src={assets.twitter_icon} width={50} alt="" />
+              <Image src={assets.googleplus_icon} width={50} alt="" />
             </div>
           </div>
         </p>
       </div>
-      <Footer/>
+      <Footer />
     </>
   ) : (
     <></>
