@@ -5,6 +5,7 @@ import { assets } from '@/Assets/assets'
 const BlogTableItem = ({authorImg,title,author,date,deleteBlog,mongoId}) => {
 
     const BlogDate = new Date(date);
+    
   return (
     
     <tr className='bg-white border-b'>

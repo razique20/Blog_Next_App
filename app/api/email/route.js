@@ -18,11 +18,16 @@ export async function POST(request) {
   return NextResponse.json({ success: true, msg: "Email subscribed" });
 }
 
-
-
 export async function GET(request) {
+  const emails = await EmailModel.find({});
 
-    return NextResponse.json({msg:"get api hitted"});
+  return NextResponse.json({ emails });
+}
 
-    
+export async function DELETE(request) {
+  const id = await request.nextUrl.searchParams.get("id");
+
+  const email = await EmailModel.findByIdAndDelete(id);
+
+  return NextResponse.json({ msg: "Subscription Deleted" });
 }

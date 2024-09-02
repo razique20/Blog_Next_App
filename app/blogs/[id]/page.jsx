@@ -62,39 +62,12 @@ const page = ({ params }) => {
           alt=""
           className="border-4 border-white"
         />
-        <h1 className="my-8 text-[26px] font-semibold">Introduction:</h1>
-        <p>{data.description}</p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the..
-        </h3>
-        <p className="my-3">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the..Lorem Ipsum is simply dummy text
-          of the printing and typesetting industry. Lorem Ipsum has been the..
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the..
-        </h3>
-        <p className="my-3">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the..Lorem Ipsum is simply dummy text
-          of the printing and typesetting industry. Lorem Ipsum has been the..
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the..
-        </h3>
-        <p className="my-3">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the..Lorem Ipsum is simply dummy text
-          of the printing and typesetting industry. Lorem Ipsum has been the..
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">Conclusion</h3>
-        <p className="my-3">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. m has been the..
+        
+       <div className="blog-content" dangerouslySetInnerHTML={{__html:data.description}}>
+
+       </div>
+       
+      
           <div className="my-24">
             <p className="text-black font font-semibold my-4">
               Share this article on social media
@@ -105,7 +78,7 @@ const page = ({ params }) => {
               <Image src={assets.googleplus_icon} width={50} alt="" />
             </div>
           </div>
-        </p>
+       
       </div>
       <Footer />
     </>
